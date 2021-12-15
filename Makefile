@@ -17,7 +17,7 @@ all: libtree
 
 libtree: libtree.o
 	$(CC) $(LDFLAGS) $^ -o $@
-
+		
 check: libtree
 	for dir in $(sort $(wildcard tests/*)); do \
 		$(MAKE) -C $$dir check; \
